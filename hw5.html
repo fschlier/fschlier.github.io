@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Frank's Garden II</title>
+        <meta name="description" content="This is CNIT131 Homework #5 Assignemt, 30 Sep 18">
+        <meta charset="utf-8">
+</head>
+    <body style="background-image: url('just-waves.png');background-color:bisque">
+
+<script>
+
+//Alert message once script- By JavaScript Kit
+//Credit notice must stay intact for use
+//Visit http://javascriptkit.com for this script
+
+//specify message to alert
+var alertmessage="Welcome to Frank's Garden web page!"
+
+///No editing required beyond here/////
+
+//Alert only once per browser session (0=no, 1=yes)
+var once_per_session=1
+
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function alertornot(){
+if (get_cookie('alerted')==''){
+loadalert()
+document.cookie="alerted=yes"
+}
+}
+
+function loadalert(){
+alert(alertmessage)
+}
+
+if (once_per_session==0)
+loadalert()
+else
+alertornot()
+
+</script>    
+        
+    <header>
+        <h1 style="text-align:center;color: green;">Welcome to Frank's Garden</h1>
+    </header>
+    <section>
+        <p style="font-family: cursive; text-align:center;border-style:dashed;border-color:plum"> Javascript note: Included in this web page is a welcome message, which you should have seen when entering this page.</p>
+        <h2 style="text-align:right">The History</h2>
+            <article>
+                <h3 style="text-align: center; font-style:italic">In the beginning...</h3>
+                <p> <span style="font-size:x-large;" >T</span>he garden started out with the acquisition of my first home in March 1993, in the Glen Park section of San Francisco near Noe Valley.  The home was a Marina style home, built in 1929, on a regular sized lot 25’ by 120’.   The backyard portion was rectangular in shape 25’ wide and 50’ in length. It faced East/West allowing a good amount of sun from the Southern exposure.</p> 
+                <p><span style="font-size:x-large;" >T</span>he style of the garden was traditional as was common on those days, following the overall rectangular shape of the property, it had an inner rectangle area with a formal sitting area and various flowering plants.  That inside area was completely surrounded on all sides by a concrete curb and sidewalk about 2 feet wide.  Perhaps they liked to stroll around their garden for exercise!  The remaining 3' from the sidewalk to the fenced borders of the property were filled with various smaller plants and shrubs.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>It's a LOT of work!</h3>
+                <p>When I acquired the property, the backyard of the home was terribly overgrown with monstrous box hedges, unkept roses, and bougainvillea all of which looked as if had not been maintained for many years.  The Bougainvillea alone  was 12ft high covered with lovely purple flowers and inside held deadly 2” thorny spikes which penetrated even the sturdiest of gardening gloves.</p>
+                <p>The plants had grown into a thicket which was almost impossible to enter into the original sitting area in the center of the garden.  What had once been a formal garden of afternoon teas and Sunday family gatherings was now a jungle of intertwined and overgrown plants taking over any semblance of order and tranquility.<br><br>  Thus, the canvas was set for what would become a 25 year labor of love.</p>
+            </article>     
+    </section>
+    <footer style="background-image: url('wallpaper.jpeg'); background-repeat:repeat-x;border-style: solid;border-width: thin;border-color: blue">
+        <h6>Frank's Gardening.<br>A labor of love in words and pictures. &copy; 2018</h6>
+        <p> This is the 1st paragraph in the footer</p>
+        <p> This is the 2nd paragraph in the footer</p>
+        <p> This is the 3rd paragraph in the footer</p>
+        <p> This is the 4th paragraph in the footer</p>
+        <p> This is the 5th paragraph in the footer</p>
+    </footer>
+    </body>
+</html>
